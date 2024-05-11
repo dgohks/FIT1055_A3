@@ -34,7 +34,7 @@ print(f'tester output: {output}')
 print(f'exif_hashed: {exif_hashed}')
 
 # Compare the output from the blockchain with the original exif_hashed
-if output == exif_hashed:
+if output == exif_hashed and output != 0:
     print('The image is validated')
 else:
     print('The image is not validated! Highly likely the image is tampered|deepfaked.')
