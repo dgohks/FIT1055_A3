@@ -36,7 +36,7 @@ exif_hashed = hashlib.sha256(exif_json.encode()).hexdigest()
 #debug print the hashed data
 print(f'exif hashed {exif_hashed}')
 
-# Hash the hashed exif with HMAc
+# Hash the hashed exif with HMAC
 key = 'secret'
 hmac_hashed = hmac.new(key.encode(), exif_hashed.encode(), hashlib.sha256).hexdigest()
 #debug print the hashed data
