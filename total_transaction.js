@@ -24,11 +24,10 @@ async function main() {
     // Replace this with the address of your deployed contract
     process.env.DEMO_CONTRACT,
   );
-  // Issuing a transaction that calls the `getData` method
-  const uuid = process.argv[2];
-  const hash = await contract.methods.getData(uuid).call();
+  // Issuing a transaction that calls the `getTransactionCount` method
+  const hash = await contract.methods.getTransactionCount().call();
 
-  console.log(hash);
+  console.log(`Total transaction count on blockchain: ${hash}`);
 }
 
 require("dotenv").config();
