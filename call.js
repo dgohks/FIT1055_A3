@@ -34,7 +34,7 @@ async function main() {
     to: contract.options.address,
     data: method_abi,
     value: '0',
-    gasPrice: '10000000000',
+    gasPrice: '85334251238',
   };
 
   const gas_estimate = await web3.eth.estimateGas(tx);

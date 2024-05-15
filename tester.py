@@ -8,7 +8,7 @@ from stegano import lsb
 
 # Open the image file
 try:
-    img_filename = 'validatedImage.png'
+    img_filename = str(input('Enter the image filename: '))
     secret = lsb.reveal(img_filename)
 except:
     raise Exception ('The image is not validated! Highly likely the image is tampered|deepfaked.')
